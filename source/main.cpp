@@ -108,7 +108,7 @@ GModDataPackProxy GModDataPackProxy::Singleton;
 
 static bool IsPathAllowed( std::string &filename )
 {
-	if( !V_RemoveDotSlashes( &filename[0], CORRECT_PATH_SEPARATOR, true ) )
+	if( !V_RemoveDotSlashes( &filename[0], CORRECT_PATH_SEPARATOR ) )
 		return false;
 
 	filename.resize( std::strlen( filename.c_str( ) ) );
